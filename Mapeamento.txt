@@ -1,0 +1,13 @@
+Cliente(ID_C,nome, data_nasc, rg, email)
+
+Jogo(ID_J, preco, categoria, nome, ID_C)
+
+Fisico(ID_JF, nome_loja)
+	ID_JF references Jogo.ID_J
+	
+Digital(ID_JD, distribuidora)
+	ID_JD references Jogo.ID_J
+	
+Compra(ID_Compra, desconto, ID_JT, ID_CT)
+	ID_JT references Jogo.ID_J
+	ID_CT references Cliente.ID_C

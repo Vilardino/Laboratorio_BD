@@ -1,0 +1,15 @@
+categoria(ID_Cat(key), nome);
+
+cliente(ID_C(key), nome, data_nasc, rg, email, preferencia);
+	preferencia ref. categoria.ID_Cat
+
+estabelecimento( CNPJ(key), cidade, nome);
+
+jogo(ID_J(key), preco, tipo, nome, categoria);
+	categoria ref. categoria.ID_Cat
+	
+compra(ID_Compra(key), desconto, ID_JT, ID_CT, ID_ET);
+	ID_JT ref. jogo.ID_J
+	ID_CT ref. cliente.ID_C
+	ID_ET ref. estabelecimento.CNPJ
+	
